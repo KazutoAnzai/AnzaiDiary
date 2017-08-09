@@ -26,4 +26,16 @@
 .name-class{
 	font-size: 500%;
  	text-align: center;
+ 	color: white;
+}
+
+.back-class{
+	height: 100vh;
+	background-image: url(background.jpg);
+	background-size: cover;
+}
+
+*{
+	margin: 0;
+	padding: 0;
 }
