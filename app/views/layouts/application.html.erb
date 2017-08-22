@@ -8,7 +8,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="main-layout" >
+  	<div>
+  		<%= image_tag('blogimage.jpg',class: 'blog-image') %>
+  	</div>
     <%= yield %>
   </body>
 </html>

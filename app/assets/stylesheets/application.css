@@ -35,7 +35,33 @@
 	background-size: cover;
 }
 
-*{
+.article-all{
+	width: 75%;
+}
+
+.article-one{
+	border-bottom: solid 1px;
+	padding-bottom: 10px;
+}
+
+.article-list{
+	border-left: solid 1px;
+	width: 25%;
+	float: right;
+}
+
+.main-layout{
+	width: 60%;
+	margin: auto;
+}
+
+.blog-image{
+	width: 100%;
+	height: 100px;
+}
+
+
+/**{
 	margin: 0;
 	padding: 0;
-}
+}*/
