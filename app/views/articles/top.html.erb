@@ -1,0 +1,26 @@
+<div class="home-class">
+	<!-- タイトル -->
+	<div class="welcome-class">Welcome To MyBlog!!</div>
+
+	<!-- 記事一覧と新規投稿ボタン -->
+	<p>
+		<%= link_to "記事一覧", articles_path, class: "top-index" %>
+		<%= link_to "新規投稿", new_article_path, class: "top-new-article" %>
+	</p>
+
+	<!-- ログインボタン -->
+	<% if user_signed_in? == false %>
+		<div class="top-login-button">
+			<%= link_to new_user_session_path do %>
+				ログイン<i class="fa fa-sign-in" aria-hidden="true"></i>
+			<% end %>
+		</div>
+	<% else %>
+		<div class="top-login-button">〜ログイン中〜</div>
+		<div class="top-logout-button">
+			<%= link_to destroy_user_session_path, method: :delete do %>
+				ログアウト<i class="fa fa-sign-out" aria-hidden="true"></i>
+			<% end %>
+		</div>
+	<% end %>
+</div>

@@ -10,8 +10,21 @@
 
   <body class="main-layout" >
   	<div>
-  		<%= image_tag('blogimage.jpg',class: 'blog-image') %>
+  		<%= link_to image_tag('MyBlog.png',class: 'blog-image'), articles_path %>
   	</div>
+
+    <% if user_signed_in? %>
+		Logged in as <%= current_user.email %>
+		<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+		<%= link_to "プロフィール変更", edit_user_registration_path %>
+    <% else %>
+    	<div class="login-button">
+			<%= link_to new_user_session_path do %>
+				ログイン<i class="fa fa-sign-in" aria-hidden="true"></i>
+			<% end %>
+		</div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

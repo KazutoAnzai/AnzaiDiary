@@ -1,0 +1,30 @@
+<%= form_for(@article) do |f| %>
+	<p>タイトル</p>
+	<%= f.text_field :title %>
+	<% if @article.errors.messages[:title].any? %>
+		<span class="error">
+				<%= @article.errors.messages[:title][0] %>
+		</span>
+	<% end %>
+
+	<p>本文</p>
+	<%= f.text_area :body, class:"new-article-body" %>
+	<% if @article.errors.messages[:body].any? %>
+		<span class="error">
+			<%= @article.errors.messages[:body][0] %>
+		</span>
+	<% end %>
+
+	<p>画像</p>
+    <%= f.file_field :picture %>
+
+	<p>著者</p>
+	<%= f.text_field :author %>
+	<% if @article.errors.messages[:author].any? %>
+		<span class="error">
+			<%= @article.errors.messages[:author][0] %>
+		</span>
+	<% end %>
+
+    <p><%= f.submit %></p>
+<% end %>
