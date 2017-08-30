@@ -14,9 +14,9 @@
   	</div>
 
     <% if user_signed_in? %>
-		Logged in as <%= current_user.email %>
-		<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-		<%= link_to "プロフィール変更", edit_user_registration_path %>
+  		Logged in as <%= current_user.email %>
+  		<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+  		<%= link_to "プロフィール変更", edit_user_registration_path %>
     <% else %>
     	<div class="login-button">
 			<%= link_to new_user_session_path do %>

@@ -3,7 +3,7 @@
 	<%= f.text_field :title %>
 	<% if @article.errors.messages[:title].any? %>
 		<span class="error">
-				<%= @article.errors.messages[:title][0] %>
+			<%= @article.errors.messages[:title][0] %>
 		</span>
 	<% end %>
 

@@ -2,11 +2,13 @@
 	<!-- タイトル -->
 	<div class="welcome-class">Welcome To MyBlog!!</div>
 
+
 	<!-- 記事一覧と新規投稿ボタン -->
 	<p>
 		<%= link_to "記事一覧", articles_path, class: "top-index" %>
 		<%= link_to "新規投稿", new_article_path, class: "top-new-article" %>
 	</p>
+
 
 	<!-- ログインボタン -->
 	<% if user_signed_in? == false %>
