@@ -10,14 +10,12 @@ end
 gem 'rails', '~> 5.1.3'
 # Use sqlite3 as the database for Active Record
 
-group :development do
-  gem 'sqlite3'
-end
+# Herokuの本番(production)環境ではPostgresqlを使用する
+gem 'sqlite3', :group => [:development, :test]
+gem 'pg', :group => [:production]
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
+# コメントアウト
+gem 'therubyracer', platforms: :ruby
 
 gem 'carrierwave'
 
