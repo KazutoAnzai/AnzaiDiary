@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 
@@ -156,7 +157,7 @@ h3 {
 .welcome-class{
 	padding-top:80px;
 	padding-bottom: 50px;
-	font-size: 150px;
+	font-size: 100px;
 	text-align: center;
 	font-weight: bold;
 	font-style:oblique;
@@ -189,18 +190,18 @@ html{
 }
 
 .top-index{
-	font-size: 50px;
+	font-size: 40px;
 	padding-left: 10%;
 }
 
 .top-new-article{
-	font-size: 50px;
+	font-size: 40px;
 	float: right;
 	padding-right: 10%;
 }
 
 .top-login-button{
-	font-size: 50px;
+	font-size: 40px;
 	text-align: center;
 }
 

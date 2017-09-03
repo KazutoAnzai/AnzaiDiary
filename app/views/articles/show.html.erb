@@ -37,7 +37,7 @@
 			<li class="comment-one">
 				<%= comment.body %>
 				<%= "　by #{comment.author}" %>
-				<%= "(#{comment.created_at.strftime("%m月%d日%H時%m分")})" %>
+				<%= "(#{comment.created_at.strftime("%m月%d日%H時%M分")})" %>
 				<% if user_signed_in? %>
 					<%= link_to "[×]", article_comment_path(@article, comment), method: :delete, "data-confirm" => "本当に削除しますか？" %>
 				<% end %>
